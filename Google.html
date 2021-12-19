@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Buscador de Google">
+    <meta name="keywords" content="Google, navegador, buscador">
+    <meta name="generator" content="es">
+    <title>Google</title>
+    <style type = "text/css">
+        #correo, #pictures, #apps, #usuario {
+        background-color: white;
+        font-family: Arial; 
+        font-style: normal;
+        font-weight: lighter;
+        font-size: small;
+        margin-right: 1%;
+        float: right;
+        height: 40px;
+        display: grid;
+        place-content: center;        
+        }
+        a {
+        color: black;
+        }
+        #logo {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        place-content: center;
+        }
+        #microfono {
+        position: relative;
+        left: 17%;
+        top: 12px;
+        }
+        #lupa {
+        position: relative;
+        right: 22%;
+        top: 5px;
+        }
+        .redondeado {
+        border-radius: 100px;
+        width: 45%;
+        height: 100%;
+        border-width: 1px;
+        border-color: #DFDFDF;
+        margin: 0;
+        border-style: solid; 
+        padding-left: 30px; 
+        position: relative;
+        left: 24%;
+        }
+        #boton_1 {
+        background-color: #F8F9FA;
+        border: none;
+        margin-top: 2%;
+        width: 15%; 
+        height: 40px;
+        border-radius: 5%;
+        font-size:medium; 
+        font-family: Arial;
+        position: relative;
+        left: 35%;
+        }
+        #boton_2 {
+        background-color: #F8F9FA;
+        border: none;
+        margin-top: 2%;
+        width: 15%;
+        height: 40px;
+        border-radius: 5%;
+        font-size:medium;  
+        font-family: Arial;
+        position: relative;
+        left: 35%;
+        }
+        #colombia{
+        background-color:#F8F9FA; 
+        color: #70757A;
+        height: 20px;
+        width: 98%;
+        font-size: small;
+        font-family: Arial;
+        text-align:left;
+        padding: 1%;
+        margin-top: 10%;
+        }
+        #texto_final {
+        color: #70757A;
+        height: 20px;
+        width: 98%;
+        font-size: small;
+        font-family: Arial;
+        text-align:left;
+        margin-top: 1px;
+        padding: 1%;
+        }
+        #texto_final_1 {
+        color: #70757A;
+        height: 20px;
+        width: 98%;
+        font-family: Arial;       
+        text-align:left;
+        margin-top: 1px;
+        padding: 1%;
+        margin-right: 45%;
+        font-size: small;
+        }
+        #final_final {
+        color: #70757A;
+        height: 20px;
+        width: 98%;
+        font-size: small;
+        font-family: Arial;
+        margin-top: 1px;
+        margin-right: 1%;
+        }
+        #final {
+        background-color:#F8F9FA; 
+        color: #70757A;
+        height: 30px;
+        width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <span id="usuario">
+        <img src="data:image/png;base64,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"
+        style="width: 35px;"
+        style="height: 35px;">
+    </span>
+    <span id="apps">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAAD09PSUlJTMzMz6+vro6Ojh4eHHx8eXl5e5ubnOzs729vYtLS0yMjJ6enppaWlJSUmfn5/n5+dPT0+urq46OjoaGhrU1NRAQEAODg5xcXGoqKhbW1uMjIyysrIlJSVxoPM4AAADwUlEQVR4nO2d2W7bMBBFo3iRLO+LvMSpk///ytoOCgflDGes0IVLnfN+QV1JHAFzSerlBQAAAAAAAAAAAAAAAAAAAOApKZtRL2RVDQ3dupZ0o9rSDauVpGvKVIb+otkWGsfYmNVG1W2qiK48qrptk9rcmdelOt6Fd1U4j+rmqu49qlu+JjcYHe9MTxH+MnS/FF3PGjC1xfgTvCC/cCdTdxJ1lalbpjXYmAMW04GgK21dIc3hwdTWJZ2LA73I3KgFYXwSfiFNxdqh26Z06HkUxUIQenSFoFt4dCk/Go6XtChm4WvqujPClQ5mHl3K13TkutJJoBu7dONAN3HpRgkdmqX7Sli/+y5dP9CZ36Yr2gcKhzjEIQ5xiEMc4hCHOMQhDnGIQxx21+HKM+Au7NPsXVe6D3STnUe3SujQ7kCf2YQ637MQ+vN6mPONWKxzL0PPgFJ73tMVnAk6Oww4Y4Vzd6EHXTekBu2HQ/ch6DyN1mNKg54R5ZzMzh+mos4RByTOSeNp3plPKZjx1JqwzlwYfFo6PbFsidH2/tQmhVWktHIxNCymbHj/udTYCzeXn+D1UmPR43Kt6gaxF3Waso7ehqwXYmncbU7xKdGfH94E3dthHn7rv1OeNuJ3cbao9Rv6QwaT15DwQx+SVPcwewAAAAAAAACdoRz3Q/b2mvKhpBvbHd3XvaR71HaLl1JtDc2kpu7tMntSl+ba4elFb86H2jGfP8RktNE+lbueF+JLtqXF4V/so81keYX/j7D2TWjtPWt5sdb3tPqs2j6N1thddrnzaS+6l5/i2tTpu21a4YjXxB0ennhNnIv2Dpak4Zovz5Pau57wWIpyPeGxkFe2x5UfSq+NVkW/sxN0np0oSfNDzxaW4tDyzkhXevDo9Dp8P679Fm8J91t4nj37LXCIQxziEIc4xCEOcYhDHOIQhzjEYQcd5t+nyb/X1rpf6tn78hT90vx73h3ILfLPnjqQH3YgA/5Jjq9V1CfL8S9kvhYDAAAAAAAAoDNkfqZC9uditD3bZN32bJPYuUaPONvE6M///+fTZH/G0D8/J8px9FbapmL2Z33lf15b/mfu5X9uYv5rMXCIQxziEIc4xCEOcYhDHOIQhzjEYR4O8/8Paf7/ks3/f8D5/9M5//9yd+Df6nb91gqbtU9D2zdhlm97/fy9FuNPUU/z4lNR3/kSTyyXyQ2eafRyc4yVtUqPWTaxcKXUI71t4jl4G7MZ9UJWlRVzDWtJN6pNXbWSdA0bLgAAAAAAAAAAAAAAAAAAAOBJ+Q01S1FIMskE3gAAAABJRU5ErkJggg=="
+        style="width: 25px;"
+        style="height: 25px;">
+    </span>
+    <span id="pictures">
+        <a
+        style="text-decoration:none";
+        href="https://www.google.com.co/imghp?hl=es-419&authuser=0&ogbl">
+        Imágenes
+        </a>
+    </span>
+    <span id="correo">
+        <a 
+        style="text-decoration:none;"
+        href="https://mail.google.com/mail/u/0/"> 
+        Gmail 
+        </a>
+    </span>
+    <div id = "logo">
+        <img src="https://www.google.com/logos/doodles/2021/seasonal-holidays-2021-6753651837109324-6752733080595603-cst.gif">
+    </div>
+    <centrar>
+        <span id = "buscador">
+            <input type="text" class="redondeado" maxlength="3000" style="height: 50px;" style="width: 75px;">
+        </span>
+    </centrar>
+    <span id ="lupa">
+        <img src="https://cdn-icons-png.flaticon.com/512/324/324654.png" style="width: 2%;" style="height: 1%;">
+    </span>
+    <span id ="microfono">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/422/662/non_2x/microphone-icon-vector-illustration.jpg" style="width: 3%;" style="height: 3%;"> 
+    </span> 
+    <div>
+        <span>
+            <button id="boton_1" type="button"> Buscar con Google </button>
+            <button id="boton_2" type="button"> Me siento con suerte </button>
+        </span>
+    </div>
+    <footer>
+        <div id="colombia"> Colombia </div>
+        <div id="final">
+            <span id="texto_final"> Sobre Google </span>
+            <span id="texto_final"> Publicidad </span>
+            <span id="texto_final"> Negocios </span>
+            <span id="texto_final_1"> Cómo funciona la Búsqueda </span>
+            <span id="final_final"> Privacidad </span>
+            <span id="final_final"> Condiciones </span>
+            <span id="final_final"> Preferencias </span>
+        </div>
+    </footer>
+    <script>
+        span = document.getElementById("apps"); 
+        span.onclick = alertita1;  
+        function alertita1(evento) {
+            alert("Esta opción aún no se encuentra disponible, estamos en proceso de aprendizaje. Gracias por la comprensión.");
+        }
+        span = document.getElementById("usuario"); 
+        span.onclick = alertita2;
+        function alertita2(evento) {
+            alert("¡Próximamente podrás iniciar sesión aquí!");
+        }
+    </script>
+</body>
+ 
+     
